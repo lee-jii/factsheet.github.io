@@ -10,26 +10,90 @@
 <!-- 인사말 시작 -->
 	<div style="width:1000px; height:400px">
 		<strong>인사말</strong><br><br>
-		호텔이름 <input type="text" name="Name" style="width:200px"><br><br>
+		호텔이름 <input type="hotelname" name="hotelname" style="width:200px"><br><br>
 		<div style="width:300px; height:240px; float:left;">
 		안녕하세요.<br>
-		'<span id="Name"></span>'를 찾아주셔서 감사합니다.<br><br>
+		'<span id="hotelname"></span>'를 찾아주셔서 감사합니다.<br><br>
 		저는 고객님의 편리한 호텔 이용을 도와드릴 컨시어지 챗봇 '레드타이버틀러'입니다. 저희 호텔에 대해 궁금하신 점은 언제든지 문의주세요.<br><br>
 		무엇을 도와드릴까요?
 
 	</div>
 
 	<script type="text/javascript">
-		const input_Name = document.querySelector('input');
-		const log_Name = document.getElementById('Name');
+		const input_hotelname = document.querySelector('input');
+		const log_hotelname = document.getElementById('hotelname');
 
-		input_Name.addEventListener('input', updateValue);
+		input_hotelname.addEventListener('input', updateValue);
 
 		function updateValue(e) {
-			log_Name.textContent = e.target.value;
+			log_hotelname.textContent = e.target.value;
 		}
 	</script>
 <!-- 인사말 끝 -->
+
+<!-- 룸마사지 시작 -->
+	<div style="width:1000px; height:400px">
+		<strong>룸마사지</strong><br><br>
+		전화번호 <input type="text" name="roommassagephonenumber" style="width:200px"><br><br>
+
+		<div style="width:300px; height:20px; float:left; margin: 2px; border: 0px solid #dddddd; padding: 12px;">
+		<input type="radio" name="gener" value="HTML">이용가능
+		</div>
+
+		<div style="width:300px; height:20px; float:left; margin: 2px; border: 0px solid #dddddd; padding: 12px;">
+		<input type="radio" name="gener" value="HTML">이용불가
+		</div>
+
+		<div style="width:300px; height:20px; float:left; margin: 2px; border: 0px solid #dddddd; padding: 12px;">
+		<input type="radio" name="gener" value="HTML">추가문의
+		</div>
+
+		<div style="width:300px; height:240px; float:left; margin: 2px; border: 2px solid #dddddd; padding: 12px;">
+			무엇을 도와드릴까요?
+			룸마사지는 1층에서 이용 가능합니다.<br><br>자세한 내용은 <span id="roommassagephonenumber_01"></span>으로 연락부탁드립니다.
+		</div>
+
+		<div style="width:300px; height:240px; float:left; margin: 2px; border: 2px solid #dddddd; padding: 12px;">
+			죄송합니다.<br><br>호텔에서 룸 마사지는 현재 제공하고 있지 않습니다. 양해 부탁드립니다.
+		</div>
+
+		<div style="width:300px; height:240px; float:left; margin: 2px; border: 2px solid #dddddd; padding: 12px;">
+			룸마사지 이용가능여부를 확인하고자 하시는 고객님께서는 <span id="roommassagephonenumber_02"></span>으로 연락부탁드립니다.
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+		const input_roommassagephonenumber = document.querySelector('input');
+		const log_roommassagephonenumber = document.getElementById('roommassagephonenumber');
+
+		input_roommassagephonenumber.addEventListener('input', updateValue);
+
+		function updateValue(e) {
+		  log_roommassagephonenumber.textContent = e.target.value;
+		}
+	</script>
+	<script type="text/javascript">
+		const input_roommassagephonenumber_01 = document.querySelector('input');
+		const log_roommassagephonenumber_01 = document.getElementById('roommassagephonenumber_01');
+
+		input_roommassagephonenumber_01.addEventListener('input', updateValue);
+
+		function updateValue(e) {
+		  log_roommassagephonenumber_01.textContent = e.target.value;
+		}
+	</script>
+	<script type="text/javascript">
+		const input_roommassagephonenumber_02 = document.querySelector('input');
+		const log_roommassagephonenumber_02 = document.getElementById('roommassagephonenumber_02');
+
+		input_roommassagephonenumber_02.addEventListener('input', updateValue);
+
+		function updateValue(e) {
+		  log_roommassagephonenumber_02.textContent = e.target.value;
+		}
+	</script>
+<!-- 룸마사지 끝 -->
 
 </body>
 
