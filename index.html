@@ -1,10 +1,36 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Result</title>
-	</head>
-	<body>
-		<h1>lee.jii Test Page</h1>
-		<p>Welcome!</p>
-	</body>
+<head>
+    <style>
+    	div{margin: 2px; border: 2px solid #dddddd; padding: 12px;}
+    </style>
+</head>
+<body>
+
+<!-- 인사말 시작 -->
+	<div style="width:1000px; height:400px">
+		<strong>인사말</strong><br><br>
+		호텔이름 <input type="text" name="Name" style="width:200px"><br><br>
+		<div style="width:300px; height:240px; float:left;">
+		안녕하세요.<br>
+		'<span id="Name"></span>'를 찾아주셔서 감사합니다.<br><br>
+		저는 고객님의 편리한 호텔 이용을 도와드릴 컨시어지 챗봇 '레드타이버틀러'입니다. 저희 호텔에 대해 궁금하신 점은 언제든지 문의주세요.<br><br>
+		무엇을 도와드릴까요?
+
+	</div>
+
+	<script type="text/javascript">
+		const input_Name = document.querySelector('input');
+		const log_Name = document.getElementById('Name');
+
+		input_Name.addEventListener('input', updateValue);
+
+		function updateValue(e) {
+		  log_Name.textContent = e.target.value;
+		}
+	</script>
+<!-- 인사말 끝 -->
+
+</body>
+
 </html>
